@@ -1205,3 +1205,11 @@ img {
     max-width: none;
   }
 }
+/* Compact Menu Cards - Desktop Only */
+@media (min-width: 769px) {
+  #menuGrid .food-card img {
+    height: 280px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
