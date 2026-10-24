@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Discover fresh food, delicious coffee and great vibes at Greenvita Cafe.">
+
+  <title>Greenvita Cafe | Good Food. Brighter Days.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-content">
+      <span class="loader-leaf">🌿</span>
+      <h1>GREENVITA</h1>
+      <p>CAFE</p>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+
+    <a href="#home" class="logo">
+      <span class="logo-icon">🌿</span>
+      <span>
+        <strong>Greenvita</strong>
+        <small>CAFE</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#offers">Offers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav-button">Visit Us →</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          WELCOME TO GREENVITA CAFE
+        </span>
+
+        <h1>
+          Good Food.<br>
+          <em>Brighter Days.</em>
+        </h1>
+
+        <p>
+          Fresh ingredients, great coffee and better vibes.
+          Discover your new favourite corner.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">
+            Explore Menu →
+          </a>
+
+          <a href="#about" class="btn btn-outline">
+            Our Story →
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-scroll">
+        <span>SCROLL TO EXPLORE</span>
+        <span>↓</span>
+      </div>
+
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights">
+
+      <div class="highlight-item">
+        <span>🌱</span>
+        <h3>Fresh Ingredients</h3>
+        <p>Made with care</p>
+      </div>
+
+      <div class="highlight-item">
+        <span>☕</span>
+        <h3>Specialty Coffee</h3>
+        <p>Brewed with love</p>
+      </div>
+
+      <div class="highlight-item">
+        <span>🍽️</span>
+        <h3>Delicious Food</h3>
+        <p>For every mood</p>
+      </div>
+
+      <div class="highlight-item">
+        <span>✨</span>
+        <h3>Cozy Ambience</h3>
+        <p>Relax and unwind</p>
+      </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+
+      <div class="container about-grid">
+
+        <div class="about-content reveal">
+
+          <span class="eyebrow">OUR STORY</span>
+
+          <h2>About Greenvita Cafe</h2>
+
+          <p>
+            More than just a cafe, Greenvita is a place where
+            good food, great coffee and positive vibes come together.
+          </p>
+
+          <p>
+            We believe in fresh ingredients, delicious flavours
+            and creating memorable moments in a warm,
+            welcoming atmosphere.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">
+            Visit Our Cafe →
+          </a>
+
+        </div>
+
+        <div class="about-image reveal">
+          <img src="images/interior.jpg"
+               alt="Greenvita Cafe interior"
+               loading="lazy">
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="section menu-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span class="eyebrow">EXPLORE OUR FLAVOURS</span>
+            <h2>Our Menu</h2>
+          </div>
+
+          <p>Fresh flavours for every craving.</p>
+
+        </div>
+
+        <div class="menu-filters">
+
+          <button class="filter active" data-category="all">
+            All
+          </button>
+
+          <button class="filter" data-category="coffee">
+            Coffee
+          </button>
+
+          <button class="filter" data-category="food">
+            Food
+          </button>
+
+          <button class="filter" data-category="desserts">
+            Desserts
+          </button>
+
+          <button class="filter" data-category="beverages">
+            Beverages
+          </button>
+
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Menu items added through JavaScript -->
+        </div>
+
+        <p class="menu-note">
+          Menu items and prices will be updated soon.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- TODAY'S SPECIAL -->
+    <section id="specials" class="section specials-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span class="eyebrow">TODAY'S SPECIAL</span>
+            <h2>Fresh Picks for You</h2>
+          </div>
+
+          <p>Something delicious, every day.</p>
+
+        </div>
+
+        <div class="specials-grid">
+
+          <div class="special-card reveal">
+
+            <img src="images/pasta.jpg"
+                 alt="Special pasta"
+                 loading="lazy">
+
+            <div class="special-info">
+              <h3>Signature Pasta</h3>
+              <span>Today's Special</span>
+            </div>
+
+          </div>
+
+          <div class="special-card reveal">
+
+            <img src="images/coffee.jpg"
+                 alt="Special coffee"
+                 loading="lazy">
+
+            <div class="special-info">
+              <h3>Specialty Coffee</h3>
+              <span>Freshly Brewed</span>
+            </div>
+
+          </div>
+
+          <div class="special-card reveal">
+
+            <img src="images/pizza.jpg"
+                 alt="Fresh pizza"
+                 loading="lazy">
+
+            <div class="special-info">
+              <h3>Fresh Pizza</h3>
+              <span>Chef's Pick</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span class="eyebrow">OUR GALLERY</span>
+            <h2>Moments at Greenvita</h2>
+          </div>
+
+          <p>Good food, great moments.</p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+          <img src="images/gallery1.jpg" alt="Cafe interior" loading="lazy">
+          <img src="images/gallery2.jpg" alt="Coffee" loading="lazy">
+          <img src="images/gallery3.jpg" alt="Delicious food" loading="lazy">
+          <img src="images/gallery4.jpg" alt="Cafe ambience" loading="lazy">
+          <img src="images/gallery5.jpg" alt="Fresh drinks" loading="lazy">
+          <img src="images/gallery6.jpg" alt="Desserts" loading="lazy">
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SPECIAL OFFERS -->
+    <section id="offers" class="section offers-section">
+
+      <div class="container offers-grid">
+
+        <div class="offers-content reveal">
+
+          <span class="eyebrow">SPECIAL OFFERS</span>
+
+          <h2>
+            Great Food.<br>
+            Greater Moments.
+          </h2>
+
+          <p>
+            Stay tuned for our latest offers
+            and seasonal specials.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">
+            Visit Us →
+          </a>
+
+        </div>
+
+        <div class="offer-banner reveal">
+
+          <span>GREENVITA CAFE</span>
+
+          <h3>Special Offers</h3>
+
+          <p>Coming Soon!</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section id="reviews" class="section reviews-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span class="eyebrow">CUSTOMER REVIEWS</span>
+            <h2>What Our Guests Say</h2>
+          </div>
+
+          <p>Real experiences. Real happiness.</p>
+
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+          <p>Customer reviews will appear here soon.</p>
+        </div>
+
+        <a href="#contact" id="reviewLink" class="btn btn-primary">
+          Find Us on Google →
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span class="eyebrow">FIND US</span>
+            <h2>Visit Greenvita Cafe</h2>
+          </div>
+
+          <p>Come for the food, stay for the vibes.</p>
+
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <h3>📍 Our Location</h3>
+
+            <p id="address">
+              Address coming soon
+            </p>
+
+            <a id="mapsLink" href="#">
+              Get Directions →
+            </a>
+
+          </div>
+
+          <div class="contact-card">
+
+            <h3>🕒 Opening Hours</h3>
+
+            <p id="openingHours">
+              Opening hours coming soon
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <h3>📞 Contact</h3>
+
+            <p id="phone">
+              Contact details coming soon
+            </p>
+
+            <a id="instagramLink" href="#">
+              Follow on Instagram →
+            </a>
+
+          </div>
+
+          <div class="contact-card">
+
+            <h3>📱 QR Code Menu</h3>
+
+            <div id="qrCode"></div>
+
+            <p>Scan to explore our menu.</p>
+
+          </div>
+
+        </div>
+
+        <div class="map-container" id="mapContainer">
+          <p>Google Maps location will be added soon.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+
+        <h3>🌿 Greenvita Cafe</h3>
+
+        <p>Good Food. Brighter Days.</p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#offers">Offers</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+      <p class="copyright">
+        © 2026 Greenvita Cafe. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- QR Code Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
