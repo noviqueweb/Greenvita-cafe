@@ -1119,3 +1119,26 @@ img {
     gap: 12px;
   }
 }
+/* Premium Menu Layout */
+#menuGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 290px));
+  gap: 24px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+#menuGrid .food-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #menuGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
