@@ -1190,3 +1190,18 @@ img {
     font-size: 13px;
   }
 }
+/* Desktop Menu Cards - Bigger Size */
+@media (min-width: 769px) {
+  #menuGrid {
+    grid-template-columns: repeat(3, minmax(0, 360px));
+    gap: 22px;
+    max-width: 1140px;
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  #menuGrid .food-card {
+    width: 100%;
+    max-width: none;
+  }
+}
