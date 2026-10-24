@@ -1205,3 +1205,26 @@ img {
     max-width: none;
   }
 }
+/* Mobile Menu Category Scrolling */
+@media (max-width: 768px) {
+
+  .menu-filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .menu-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-filters .filter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+}
