@@ -47,20 +47,20 @@ if (menuToggle && navMenu) {
 // Replace these with the cafe's actual menu.
 const menuItems = [
   // JUICES
-  { name: "Mosambi Juice", category: "beverages", image: "images/Mosambi Juice.PNG", description: "₹99" },
-  { name: "Guava Juice", category: "beverages", image: "images/Guava Juice.PNG", description: "₹99" },
-  { name: "Watermelon Juice", category: "beverages", image: "images/Watermelon Juice.PNG", description: "₹99" },
-  { name: "Pineapple Juice", category: "beverages", image: "images/Pineapple Juice.PNG", description: "₹99" },
-  { name: "Orange Juice", category: "beverages", image: "images/Orange Juice.PNG", description: "₹99" },
-  { name: "Dragon Fruit Juice", category: "beverages", image: "images/Dragon Fruit Juice.PNG", description: "₹99" },
+  { name: "Mosambi Juice", category: "juices", image: "images/Mosambi Juice.PNG", description: "₹99" },
+  { name: "Guava Juice", category: "juices", image: "images/Guava Juice.PNG", description: "₹99" },
+  { name: "Watermelon Juice", category: "juices", image: "images/Watermelon Juice.PNG", description: "₹99" },
+  { name: "Pineapple Juice", category: "juices", image: "images/Pineapple Juice.PNG", description: "₹99" },
+  { name: "Orange Juice", category: "juices", image: "images/Orange Juice.PNG", description: "₹99" },
+  { name: "Dragon Fruit Juice", category: "juices", image: "images/Dragon Fruit Juice.PNG", description: "₹99" },
 
   // MOJITOS
-  { name: "Classic Mojito", category: "beverages", image: "images/Classic Mojito.PNG", description: "₹129" },
-  { name: "Blue Mojito", category: "beverages", image: "images/Blue Mojito.PNG", description: "₹129" },
-  { name: "Watermelon Mojito", category: "beverages", image: "images/Watermelon Mojito.PNG", description: "₹129" },
-  { name: "Pineapple Mojito", category: "beverages", image: "images/Pineapple Mojito.PNG", description: "₹129" },
-  { name: "Masala Mojito", category: "beverages", image: "images/Masala Mojito.PNG", description: "₹79" },
-  { name: "Guava Mojito", category: "beverages", image: "images/Guava Mojito.PNG", description: "₹129" },
+  { name: "Classic Mojito", category: "mojitos", image: "images/Classic Mojito.PNG", description: "₹129" },
+  { name: "Blue Mojito", category: "mojitos", image: "images/Blue Mojito.PNG", description: "₹129" },
+  { name: "Watermelon Mojito", category: "mojitos", image: "images/Watermelon Mojito.PNG", description: "₹129" },
+  { name: "Pineapple Mojito", category: "mojitos", image: "images/Pineapple Mojito.PNG", description: "₹129" },
+  { name: "Masala Mojito", category: "mojitos", image: "images/Masala Mojito.PNG", description: "₹79" },
+  { name: "Guava Mojito", category: "mojitos", image: "images/Guava Mojito.PNG", description: "₹129" },
 
   // SNACKS
   { name: "Masala Maggi", category: "food", image: "images/Masala Maggi.PNG", description: "₹59" },
@@ -83,14 +83,14 @@ const menuItems = [
   { name: "Veg Cheese Grill Sandwich", category: "food", image: "images/Veg Cheese Grill Sandwich.PNG", description: "₹119" },
 
   // FRUIT BOWLS
-  { name: "Fruit Bowl Mini", category: "food", image: "images/Fruit Bowl Mini.PNG", description: "₹99" },
-  { name: "Fruit Bowl Regular", category: "food", image: "images/Fruit Bowl Regular.PNG", description: "₹149" }
+  { name: "Fruit Bowl Mini", category: "bowls", image: "images/Fruit Bowl Mini.PNG", description: "₹99" },
+  { name: "Fruit Bowl Regular", category: "bowls", image: "images/Fruit Bowl Regular.PNG", description: "₹149" }
 ];
 
 // Render menu cards
 const menuGrid = document.getElementById("menuGrid");
 
-function renderMenu(category = "all") {
+function renderMenu(category = "coffee") {
   if (!menuGrid) return;
 
   const filteredItems = menuItems.filter(item =>
