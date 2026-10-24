@@ -47,53 +47,44 @@ if (menuToggle && navMenu) {
 // Replace these with the cafe's actual menu.
 const menuItems = [
   // JUICES
-  { name: "Mosambi Juice", category: "beverages", image: "images/mosambi juice.PNG", description: "₹99" },
+  { name: "Mosambi Juice", category: "beverages", image: "images/Mosambi Juice.PNG", description: "₹99" },
   { name: "Guava Juice", category: "beverages", image: "images/Guava Juice.PNG", description: "₹99" },
   { name: "Watermelon Juice", category: "beverages", image: "images/Watermelon Juice.PNG", description: "₹99" },
   { name: "Pineapple Juice", category: "beverages", image: "images/Pineapple Juice.PNG", description: "₹99" },
   { name: "Orange Juice", category: "beverages", image: "images/Orange Juice.PNG", description: "₹99" },
   { name: "Dragon Fruit Juice", category: "beverages", image: "images/Dragon Fruit Juice.PNG", description: "₹99" },
 
-  // MOJITO
+  // MOJITOS
   { name: "Classic Mojito", category: "beverages", image: "images/Classic Mojito.PNG", description: "₹129" },
   { name: "Blue Mojito", category: "beverages", image: "images/Blue Mojito.PNG", description: "₹129" },
-  { name: "Watermelon Mojito", category: "beverages", image: "", description: "₹129" },
-  { name: "Pineapple Mojito", category: "beverages", image: "", description: "₹129" },
-  { name: "Masala Mojito", category: "beverages", image: "", description: "₹79" },
-  { name: "Guava Mojito", category: "beverages", image: "", description: "₹129" },
+  { name: "Watermelon Mojito", category: "beverages", image: "images/Watermelon Mojito.PNG", description: "₹129" },
+  { name: "Pineapple Mojito", category: "beverages", image: "images/Pineapple Mojito.PNG", description: "₹129" },
+  { name: "Masala Mojito", category: "beverages", image: "images/Masala Mojito.PNG", description: "₹79" },
+  { name: "Guava Mojito", category: "beverages", image: "images/Guava Mojito.PNG", description: "₹129" },
 
   // SNACKS
-  { name: "Masala Maggi", category: "food", image: "", description: "₹59" },
-  { name: "Cheese Maggi", category: "food", image: "", description: "₹79" },
-  { name: "Peri Peri Fries", category: "food", image: "", description: "₹99" },
-  { name: "Classic Salted Fries", category: "food", image: "", description: "₹79" },
-  { name: "Cheese Fries", category: "food", image: "", description: "₹119" },
+  { name: "Masala Maggi", category: "food", image: "images/Masala Maggi.PNG", description: "₹59" },
+  { name: "Cheese Maggi", category: "food", image: "images/Cheese Maggi.PNG", description: "₹79" },
+  { name: "Peri Peri Fries", category: "food", image: "images/Peri Peri Fries .PNG", description: "₹99" },
+  { name: "Classic Salted Fries", category: "food", image: "images/Classic Salted Fries.PNG", description: "₹79" },
+  { name: "Cheese Fries", category: "food", image: "images/Cheese Fries.PNG", description: "₹119" },
 
   // COFFEE
-  { name: "Cappuccino", category: "coffee", image: "", description: "₹99" },
-  { name: "Cappuccino", category: "coffee", image: "", description: "₹129" },
-  { name: "Cafe Latte", category: "coffee", image: "", description: "₹129" },
-  { name: "Cold Coffee", category: "coffee", image: "", description: "₹129" },
-
-  // FRUIT BOWLS
-  { name: "Mini Fruit Bowl (200g)", category: "food", image: "", description: "₹49" },
-  { name: "Regular Fruit Bowl (300g)", category: "food", image: "", description: "₹79" },
+  { name: "Espresso", category: "coffee", image: "images/Espresso.PNG", description: "₹99" },
+  { name: "Cappuccino", category: "coffee", image: "images/Cappuccino.PNG", description: "₹129" },
+  { name: "Cafe Latte", category: "coffee", image: "images/Cafe Latte.PNG", description: "₹129" },
+  { name: "Cold Coffee", category: "coffee", image: "images/Cold Coffee.PNG", description: "₹129" },
 
   // SANDWICHES
-  { name: "Veg Sandwich", category: "food", image: "", description: "₹49" },
-  { name: "Toast Sandwich", category: "food", image: "", description: "₹69" },
-  { name: "Cheese Toast Sandwich", category: "food", image: "", description: "₹89" },
-  { name: "Veg Grill Sandwich", category: "food", image: "", description: "₹99" },
-  { name: "Veg Cheese Grill Sandwich", category: "food", image: "", description: "₹129" },
+  { name: "Toast Sandwich", category: "food", image: "images/Toast Sandwich.PNG", description: "₹79" },
+  { name: "Cheese Toast Sandwich", category: "food", image: "images/Cheese Toast Sandwich.PNG", description: "₹99" },
+  { name: "Veg Sandwich", category: "food", image: "images/Veg Sandwich.PNG", description: "₹79" },
+  { name: "Veg Grill Sandwich", category: "food", image: "images/Veg Grill Sandwich.PNG", description: "₹99" },
+  { name: "Veg Cheese Grill Sandwich", category: "food", image: "images/Veg Cheese Grill Sandwich.PNG", description: "₹119" },
 
-  // MINI PANCAKES
-  { name: "Nutella Pancake", category: "desserts", image: "", description: "₹119" },
-  { name: "Nutella Banana Pancake", category: "desserts", image: "", description: "₹119" },
-  { name: "Nutella Strawberry Pancake", category: "desserts", image: "", description: "₹119" },
-  { name: "Biscoff Pancake", category: "desserts", image: "", description: "₹129" },
-  { name: "Fresh Fruits Pancake with Whipped Cream", category: "desserts", image: "", description: "₹129" },
-  { name: "Oreo Pancake", category: "desserts", image: "", description: "₹149" },
-  { name: "Nutella Filled Pancake", category: "desserts", image: "", description: "₹149" }
+  // FRUIT BOWLS
+  { name: "Fruit Bowl Mini", category: "food", image: "images/Fruit Bowl Mini.PNG", description: "₹99" },
+  { name: "Fruit Bowl Regular", category: "food", image: "images/Fruit Bowl Regular.PNG", description: "₹149" }
 ];
 
 // Render menu cards
