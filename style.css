@@ -1010,3 +1010,27 @@ img {
     min-width: 0;
   }
 }
+/* PREMIUM COMPACT MOBILE MENU */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .menu-grid img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .menu-grid h3 {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .menu-grid p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
