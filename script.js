@@ -46,42 +46,54 @@ if (menuToggle && navMenu) {
 // Menu data — sample items only
 // Replace these with the cafe's actual menu.
 const menuItems = [
-  {
-    name: "Cappuccino",
-    category: "coffee",
-    image: "images/coffee.jpg",
-    description: "Freshly brewed coffee"
-  },
-  {
-    name: "Cold Coffee",
-    category: "coffee",
-    image: "images/cold-coffee.jpg",
-    description: "Chilled and refreshing"
-  },
-  {
-    name: "Signature Pasta",
-    category: "food",
-    image: "images/pasta.jpg",
-    description: "Creamy and delicious"
-  },
-  {
-    name: "Classic Pizza",
-    category: "food",
-    image: "images/pizza.jpg",
-    description: "Freshly prepared"
-  },
-  {
-    name: "Chocolate Brownie",
-    category: "desserts",
-    image: "images/brownie.jpg",
-    description: "Rich chocolate flavour"
-  },
-  {
-    name: "Fresh Mojito",
-    category: "beverages",
-    image: "images/mojito.jpg",
-    description: "Cool and refreshing"
-  }
+  // JUICES
+  { name: "Mosambi Juice", category: "beverages", image: "", description: "₹99" },
+  { name: "Guava Juice", category: "beverages", image: "", description: "₹99" },
+  { name: "Watermelon Juice", category: "beverages", image: "", description: "₹99" },
+  { name: "Pineapple Juice", category: "beverages", image: "", description: "₹99" },
+  { name: "Orange Juice", category: "beverages", image: "", description: "₹99" },
+  { name: "Dragon Fruit Juice", category: "beverages", image: "", description: "₹99" },
+
+  // MOJITO
+  { name: "Classic Mojito", category: "beverages", image: "", description: "₹129" },
+  { name: "Blue Mojito", category: "beverages", image: "", description: "₹129" },
+  { name: "Watermelon Mojito", category: "beverages", image: "", description: "₹129" },
+  { name: "Pineapple Mojito", category: "beverages", image: "", description: "₹129" },
+  { name: "Masala Mojito", category: "beverages", image: "", description: "₹79" },
+  { name: "Guava Mojito", category: "beverages", image: "", description: "₹129" },
+
+  // SNACKS
+  { name: "Masala Maggi", category: "food", image: "", description: "₹59" },
+  { name: "Cheese Maggi", category: "food", image: "", description: "₹79" },
+  { name: "Peri Peri Fries", category: "food", image: "", description: "₹89" },
+  { name: "Classic Salted Fries", category: "food", image: "", description: "₹79" },
+  { name: "Cheese Fries", category: "food", image: "", description: "₹119" },
+
+  // COFFEE
+  { name: "Espresso", category: "coffee", image: "", description: "₹99" },
+  { name: "Cappuccino", category: "coffee", image: "", description: "₹129" },
+  { name: "Cafe Latte", category: "coffee", image: "", description: "₹139" },
+  { name: "Cold Coffee", category: "coffee", image: "", description: "₹129" },
+
+  // FRUIT BOWLS
+  { name: "Mini Fruit Bowl (200g)", category: "food", image: "", description: "₹49" },
+  { name: "Regular Fruit Bowl (300g)", category: "food", image: "", description: "₹79" },
+
+  // SANDWICHES
+  { name: "Veg Sandwich", category: "food", image: "", description: "₹49" },
+  { name: "Toast Sandwich", category: "food", image: "", description: "₹59" },
+  { name: "Cheese Toast Sandwich", category: "food", image: "", description: "₹69" },
+  { name: "Veg Grill Sandwich", category: "food", image: "", description: "₹109" },
+  { name: "Veg Cheese Grill Sandwich", category: "food", image: "", description: "₹129" },
+
+  // MINI PANCAKES
+  { name: "Nutella Pancake", category: "desserts", image: "", description: "₹119" },
+  { name: "Nutella Banana Pancake", category: "desserts", image: "", description: "₹119" },
+  { name: "Nutella Strawberry Pancake", category: "desserts", image: "", description: "₹119" },
+  { name: "Biscoff Pancake", category: "desserts", image: "", description: "₹129" },
+  { name: "Fresh Fruit Pancake with Whipped Cream", category: "desserts", image: "", description: "₹149" },
+  { name: "Oreo Pancake", category: "desserts", image: "", description: "₹129" },
+  { name: "Nutella Filled Pancake", category: "desserts", image: "", description: "₹149" }
 ];
 
 // Render menu cards
