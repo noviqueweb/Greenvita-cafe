@@ -123,7 +123,7 @@ function renderMenu(category = "coffee") {
   });
 }
 
-renderMenu();
+renderMenu("coffee");
 
 // Menu category filters
 document.querySelectorAll(".filter").forEach(button => {
