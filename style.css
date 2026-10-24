@@ -960,3 +960,18 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+/* GREENVITA ORIGINAL LOGO */
+
+.brand-logo {
+  width: 175px;
+  height: auto;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 135px;
+    max-height: 55px;
+  }
+}
