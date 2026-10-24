@@ -1213,7 +1213,7 @@ img {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    gap: 10px;
+    gap: 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
