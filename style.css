@@ -1081,3 +1081,18 @@ img {
     height: 190px;
   }
 }
+/* Final premium portrait menu cards */
+.food-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: contain;
+  object-position: center;
+  background: #1b2920;
+  display: block;
+}
+
+.food-card {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 16px;
+}
