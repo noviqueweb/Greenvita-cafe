@@ -47,16 +47,16 @@ if (menuToggle && navMenu) {
 // Replace these with the cafe's actual menu.
 const menuItems = [
   // JUICES
-  { name: "Mosambi Juice", category: "beverages", image: "", description: "₹99" },
-  { name: "Guava Juice", category: "beverages", image: "", description: "₹99" },
-  { name: "Watermelon Juice", category: "beverages", image: "", description: "₹99" },
-  { name: "Pineapple Juice", category: "beverages", image: "", description: "₹99" },
-  { name: "Orange Juice", category: "beverages", image: "", description: "₹99" },
-  { name: "Dragon Fruit Juice", category: "beverages", image: "", description: "₹99" },
+  { name: "Mosambi Juice", category: "beverages", image: "images/mosambi juice.PNG", description: "₹99" },
+  { name: "Guava Juice", category: "beverages", image: "images/Guava Juice.PNG", description: "₹99" },
+  { name: "Watermelon Juice", category: "beverages", image: "images/Watermelon Juice.PNG", description: "₹99" },
+  { name: "Pineapple Juice", category: "beverages", image: "images/Pineapple Juice.PNG", description: "₹99" },
+  { name: "Orange Juice", category: "beverages", image: "images/Orange Juice.PNG", description: "₹99" },
+  { name: "Dragon Fruit Juice", category: "beverages", image: "images/Dragon Fruit Juice.PNG", description: "₹99" },
 
   // MOJITO
-  { name: "Classic Mojito", category: "beverages", image: "", description: "₹129" },
-  { name: "Blue Mojito", category: "beverages", image: "", description: "₹129" },
+  { name: "Classic Mojito", category: "beverages", image: "images/Classic Mojito.PNG", description: "₹129" },
+  { name: "Blue Mojito", category: "beverages", image: "images/Blue Mojito.PNG", description: "₹129" },
   { name: "Watermelon Mojito", category: "beverages", image: "", description: "₹129" },
   { name: "Pineapple Mojito", category: "beverages", image: "", description: "₹129" },
   { name: "Masala Mojito", category: "beverages", image: "", description: "₹79" },
@@ -65,14 +65,14 @@ const menuItems = [
   // SNACKS
   { name: "Masala Maggi", category: "food", image: "", description: "₹59" },
   { name: "Cheese Maggi", category: "food", image: "", description: "₹79" },
-  { name: "Peri Peri Fries", category: "food", image: "", description: "₹89" },
+  { name: "Peri Peri Fries", category: "food", image: "", description: "₹99" },
   { name: "Classic Salted Fries", category: "food", image: "", description: "₹79" },
   { name: "Cheese Fries", category: "food", image: "", description: "₹119" },
 
   // COFFEE
-  { name: "Espresso", category: "coffee", image: "", description: "₹99" },
+  { name: "Cappuccino", category: "coffee", image: "", description: "₹99" },
   { name: "Cappuccino", category: "coffee", image: "", description: "₹129" },
-  { name: "Cafe Latte", category: "coffee", image: "", description: "₹139" },
+  { name: "Cafe Latte", category: "coffee", image: "", description: "₹129" },
   { name: "Cold Coffee", category: "coffee", image: "", description: "₹129" },
 
   // FRUIT BOWLS
@@ -81,9 +81,9 @@ const menuItems = [
 
   // SANDWICHES
   { name: "Veg Sandwich", category: "food", image: "", description: "₹49" },
-  { name: "Toast Sandwich", category: "food", image: "", description: "₹59" },
-  { name: "Cheese Toast Sandwich", category: "food", image: "", description: "₹69" },
-  { name: "Veg Grill Sandwich", category: "food", image: "", description: "₹109" },
+  { name: "Toast Sandwich", category: "food", image: "", description: "₹69" },
+  { name: "Cheese Toast Sandwich", category: "food", image: "", description: "₹89" },
+  { name: "Veg Grill Sandwich", category: "food", image: "", description: "₹99" },
   { name: "Veg Cheese Grill Sandwich", category: "food", image: "", description: "₹129" },
 
   // MINI PANCAKES
@@ -91,8 +91,8 @@ const menuItems = [
   { name: "Nutella Banana Pancake", category: "desserts", image: "", description: "₹119" },
   { name: "Nutella Strawberry Pancake", category: "desserts", image: "", description: "₹119" },
   { name: "Biscoff Pancake", category: "desserts", image: "", description: "₹129" },
-  { name: "Fresh Fruit Pancake with Whipped Cream", category: "desserts", image: "", description: "₹149" },
-  { name: "Oreo Pancake", category: "desserts", image: "", description: "₹129" },
+  { name: "Fresh Fruits Pancake with Whipped Cream", category: "desserts", image: "", description: "₹129" },
+  { name: "Oreo Pancake", category: "desserts", image: "", description: "₹149" },
   { name: "Nutella Filled Pancake", category: "desserts", image: "", description: "₹149" }
 ];
 
