@@ -139,6 +139,11 @@ function openItemModal(item) {
   document.getElementById("modalItemName").textContent = item.name;
   document.getElementById("modalItemPrice").textContent = item.description;
   updateModalFavourite();
+  const whatsappButton = document.getElementById("modalWhatsAppButton");
+  if (whatsappButton) {
+    const message = `Hi Green Vita Café! I would like to order ${item.name} (${item.description}). Please confirm availability and order details.`;
+    whatsappButton.href = "https://wa.me/918779500135?text=" + encodeURIComponent(message);
+  }
   itemModal.hidden = false;
   document.body.classList.add("item-modal-open");
   itemModal.querySelector(".item-modal-close").focus();
@@ -220,16 +225,7 @@ function renderMenu(category = "coffee") {
     body.append(title, description);
     openButton.append(img, body);
 
-    const heart = document.createElement("button");
-    heart.type = "button";
-    heart.className = "food-card-heart";
-    const liked = favourites.includes(item.name);
-    heart.textContent = liked ? "♥" : "♡";
-    heart.classList.toggle("is-favourite", liked);
-    heart.setAttribute("aria-label", (liked ? "Remove " : "Save ") + item.name + (liked ? " from favourites" : " to favourites"));
-    heart.setAttribute("aria-pressed", String(liked));
-    heart.addEventListener("click", () => toggleFavourite(item.name));
-    card.append(openButton, heart);
+    card.append(openButton);
     menuGrid.appendChild(card);
   });
 }
