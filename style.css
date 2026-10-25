@@ -1234,3 +1234,11 @@ img {
   }
 
 }
+@media (max-width: 600px) {
+  .menu-section .menu-filters {
+    width: calc(100% + 4vw);
+    margin-left: -2vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
