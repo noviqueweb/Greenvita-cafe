@@ -342,11 +342,7 @@ function generateQRCode() {
 
   qrContainer.innerHTML = "";
 
-  const menuUrl = new URL(
-    window.location.pathname + "#menu",
-    window.location.origin
-  ).href;
-
+  const menuUrl = "https://greenvita.pages.dev/menu.html";
   new QRCode(qrContainer, {
     text: menuUrl,
     width: 110,
