@@ -1213,7 +1213,7 @@ img {
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-padding-inline: 12px;
-   padding: 2px 12px;
+   padding: 2px 16px;
     overflow-y: hidden;
     gap: 8px;
     -webkit-overflow-scrolling: touch;
