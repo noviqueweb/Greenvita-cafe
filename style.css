@@ -514,18 +514,39 @@ img {
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
 }
 
 .gallery-grid img {
-  width: 100%;
-  height: 260px;
-  border-radius: 14px;
-  transition: transform 0.35s;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.35s;
 }
 
+/* Last horizontal photo */
+.gallery-grid img:last-child {
+    grid-column: span 2;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid img {
+        height: 190px;
+    }
+
+    .gallery-grid img:last-child {
+        grid-column: span 2;
+        height: 240px;
+    }
+}
 .gallery-grid img:hover {
   transform: scale(1.025);
 }
