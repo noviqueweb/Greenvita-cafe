@@ -1273,3 +1273,18 @@ img {
     scroll-margin-top: 0px;
   }
 }
+/* Mobile Highlights Spacing Fix */
+@media (max-width: 768px) {
+  .highlights {
+    padding: 30px 5%;
+    gap: 20px 10px;
+  }
+
+  .highlight-item {
+    padding: 10px 5px;
+  }
+
+  .about-section {
+    padding-top: 20px;
+  }
+}
