@@ -4,10 +4,10 @@
 
 // Cafe details — update when available
 const cafe = {
-  phone: "",
-  address: "",
-  openingHours: "",
-  instagramUrl: "",
+  phone: "8779500135",
+  address: "Shop No. 4, Shantivan 3 Society, Vrindavan Society, Shantivan Society, Raheja Township, Malad East, Mumbai, Maharashtra 400097",
+  openingHours: "Monday – Sunday: 10:00 AM – 12:00 Midnight",
+  instagramUrl: "https://www.instagram.com/greenvita_cafe/",
   mapsUrl: "",
   googleReviewUrl: ""
 };
