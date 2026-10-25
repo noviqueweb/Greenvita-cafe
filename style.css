@@ -1376,3 +1376,17 @@ body.item-modal-open { overflow:hidden; }
   .item-modal-actions { gap:9px; }
   .item-favourite-action,.item-whatsapp-action { min-height:44px; padding:11px 13px; }
 }
+
+/* Combined favourites order — visible only in My Favourites */
+.favourites-order-bar[hidden] { display:none !important; }
+.favourites-order-bar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; padding:17px 20px; margin:0 0 22px; border:1px solid rgba(255,255,255,.35); border-radius:18px; background:rgba(255,255,255,.09); }
+.favourites-order-bar p { color:#fff; font-weight:700; font-size:15px; }
+.favourites-order-button { display:inline-flex; align-items:center; justify-content:center; padding:13px 20px; border-radius:999px; background:#fffdf5; color:#194D38; font-weight:700; font-size:14px; text-align:center; }
+.favourites-order-button:hover { background:#e8f5e9; }
+/* Fill the image area on phones without side gutters. */
+@media (max-width:600px) {
+  .item-modal-image-wrap { background:#f0eee5; }
+  .item-modal-image-wrap img { width:100%; height:100%; object-fit:cover; object-position:center 65%; }
+  .favourites-order-bar { padding:15px; }
+  .favourites-order-button { width:100%; }
+}

@@ -105,9 +105,31 @@ const favouritesCount = document.getElementById("favouritesCount");
 const modalFavouriteButton = document.getElementById("modalFavouriteButton");
 let previousFocus = null;
 
+// Combined order of all saved favourite items.
+const favouritesOrderBar = document.getElementById("favouritesOrderBar");
+const favouritesOrderButton = document.getElementById("favouritesOrderButton");
+const favouritesOrderSummary = document.getElementById("favouritesOrderSummary");
+
+function updateFavouritesOrder() {
+  if (!favouritesOrderBar) return;
+  const savedItems = menuItems.filter(item => favourites.includes(item.name));
+  favouritesOrderBar.hidden = !showingFavourites || savedItems.length === 0;
+  if (savedItems.length === 0) return;
+
+  const total = savedItems.reduce((sum, item) => {
+    const price = Number(String(item.description).replace(/[^0-9.]/g, ""));
+    return sum + (Number.isFinite(price) ? price : 0);
+  }, 0);
+  const lines = savedItems.map((item, index) => `${index + 1}. ${item.name} - ${item.description}`);
+  const message = `Hi Green Vita Café! I would like to order:\n\n${lines.join("\n")}\n\nTotal: ₹${total}\n\nPlease confirm availability and order details.`;
+  if (favouritesOrderSummary) favouritesOrderSummary.textContent = `${savedItems.length} favourite item${savedItems.length === 1 ? "" : "s"} · Total ₹${total}`;
+  if (favouritesOrderButton) favouritesOrderButton.href = "https://wa.me/918779500135?text=" + encodeURIComponent(message);
+}
+
 function saveFavourites() {
   try { localStorage.setItem(FAVOURITES_KEY, JSON.stringify(favourites)); } catch (error) { /* Storage disabled */ }
   if (favouritesCount) favouritesCount.textContent = favourites.length;
+  updateFavouritesOrder();
   if (favouritesToggle) {
     favouritesToggle.classList.toggle("selected", showingFavourites);
     favouritesToggle.setAttribute("aria-pressed", String(showingFavourites));
