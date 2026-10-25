@@ -1412,3 +1412,16 @@ body.item-modal-open { overflow:hidden; }
   .favourites-order-bar { padding:15px; }
   .favourites-order-button { width:100%; }
 }
+@media (max-width: 600px) {
+    .item-modal-panel {
+        width: 88%;
+        max-width: 360px;
+        margin: auto;
+    }
+
+    .item-modal-image-wrap img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
