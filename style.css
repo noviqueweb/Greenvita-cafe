@@ -325,8 +325,8 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: white;
-  padding: 35px 6%;
-  gap: 20px;
+  padding: 18px 6%;
+  gap: 12px;
 }
 
 .highlight-item {
