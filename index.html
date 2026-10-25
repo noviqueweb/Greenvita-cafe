@@ -211,6 +211,10 @@
 
 </div>
 
+        <div class="menu-actions">
+          <button type="button" id="viewFavourites" class="favourites-toggle" aria-label="Show saved favourites">♡ My Favourites <span id="favouritesCount">0</span></button>
+        </div>
+
         <div class="menu-grid" id="menuGrid">
           <!-- Menu items added through JavaScript -->
         </div>
@@ -492,6 +496,22 @@
     </div>
 
   </footer>
+
+  <!-- MENU ITEM DETAILS -->
+  <div id="itemModal" class="item-modal" hidden>
+    <div class="item-modal-backdrop" data-close-modal></div>
+    <section class="item-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalItemName">
+      <button class="item-modal-close" type="button" aria-label="Close item details" data-close-modal>×</button>
+      <div class="item-modal-image-wrap"><img id="modalItemImage" src="" alt=""></div>
+      <div class="item-modal-content">
+        <span class="item-modal-kicker">GREENVITA CAFÉ · MENU</span>
+        <h2 id="modalItemName"></h2>
+        <p id="modalItemPrice" class="item-modal-price"></p>
+        <p class="item-modal-note">Fresh flavours, made for your favourite moments.</p>
+        <button type="button" id="modalFavouriteButton" class="item-favourite-action">♡ Add to Favourites</button>
+      </div>
+    </section>
+  </div>
 
   <!-- QR Code Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>

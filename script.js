@@ -87,21 +87,124 @@ const menuItems = [
   { name: "Fruit Bowl Regular", category: "bowls", image: "images/Fruit Bowl Regular.PNG", description: "₹149" }
 ];
 
+// Favourite items are stored only in this browser.
+const FAVOURITES_KEY = "greenvita-favourites-v1";
+let favourites = [];
+try {
+  const saved = JSON.parse(localStorage.getItem(FAVOURITES_KEY) || "[]");
+  favourites = Array.isArray(saved) ? saved.filter(name => menuItems.some(item => item.name === name)) : [];
+} catch (error) {
+  favourites = [];
+}
+let showingFavourites = false;
+let currentCategory = "coffee";
+let selectedItem = null;
+const itemModal = document.getElementById("itemModal");
+const favouritesToggle = document.getElementById("viewFavourites");
+const favouritesCount = document.getElementById("favouritesCount");
+const modalFavouriteButton = document.getElementById("modalFavouriteButton");
+let previousFocus = null;
+
+function saveFavourites() {
+  try { localStorage.setItem(FAVOURITES_KEY, JSON.stringify(favourites)); } catch (error) { /* Storage disabled */ }
+  if (favouritesCount) favouritesCount.textContent = favourites.length;
+  if (favouritesToggle) {
+    favouritesToggle.classList.toggle("selected", showingFavourites);
+    favouritesToggle.setAttribute("aria-pressed", String(showingFavourites));
+  }
+}
+
+function toggleFavourite(name) {
+  if (favourites.includes(name)) favourites = favourites.filter(item => item !== name);
+  else favourites.push(name);
+  saveFavourites();
+  updateModalFavourite();
+  renderMenu(currentCategory);
+}
+
+function updateModalFavourite() {
+  if (!selectedItem || !modalFavouriteButton) return;
+  const isFavourite = favourites.includes(selectedItem.name);
+  modalFavouriteButton.textContent = isFavourite ? "♥ Remove from Favourites" : "♡ Add to Favourites";
+  modalFavouriteButton.classList.toggle("is-favourite", isFavourite);
+  modalFavouriteButton.setAttribute("aria-pressed", String(isFavourite));
+}
+
+function openItemModal(item) {
+  if (!itemModal) return;
+  selectedItem = item;
+  previousFocus = document.activeElement;
+  document.getElementById("modalItemImage").src = item.image;
+  document.getElementById("modalItemImage").alt = item.name;
+  document.getElementById("modalItemName").textContent = item.name;
+  document.getElementById("modalItemPrice").textContent = item.description;
+  updateModalFavourite();
+  itemModal.hidden = false;
+  document.body.classList.add("item-modal-open");
+  itemModal.querySelector(".item-modal-close").focus();
+}
+
+function closeItemModal() {
+  if (!itemModal || itemModal.hidden) return;
+  itemModal.hidden = true;
+  document.body.classList.remove("item-modal-open");
+  selectedItem = null;
+  if (previousFocus && previousFocus.isConnected) previousFocus.focus();
+}
+
+if (itemModal) {
+  itemModal.querySelectorAll("[data-close-modal]").forEach(el => el.addEventListener("click", closeItemModal));
+  itemModal.addEventListener("keydown", event => {
+    if (event.key !== "Tab") return;
+    const focusable = [...itemModal.querySelectorAll("button")];
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
+}
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeItemModal();
+});
+if (modalFavouriteButton) modalFavouriteButton.addEventListener("click", () => {
+  if (selectedItem) toggleFavourite(selectedItem.name);
+});
+if (favouritesToggle) favouritesToggle.addEventListener("click", () => {
+  showingFavourites = !showingFavourites;
+  saveFavourites();
+  renderMenu(currentCategory);
+});
+saveFavourites();
+
 // Render menu cards
 const menuGrid = document.getElementById("menuGrid");
 
 function renderMenu(category = "coffee") {
   if (!menuGrid) return;
+  currentCategory = category;
+  const filteredItems = showingFavourites
+    ? menuItems.filter(item => favourites.includes(item.name))
+    : menuItems.filter(item => category === "all" || item.category === category);
 
-  const filteredItems = menuItems.filter(item =>
-    category === "all" || item.category === category
-  );
-
-  menuGrid.innerHTML = "";
+  menuGrid.replaceChildren();
+  if (filteredItems.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "menu-empty";
+    empty.textContent = showingFavourites
+      ? "No favourites yet. Open a menu item and tap Add to Favourites!"
+      : "Items for this category are coming soon.";
+    menuGrid.appendChild(empty);
+    return;
+  }
 
   filteredItems.forEach(item => {
     const card = document.createElement("article");
-    card.className = "food-card";
+    card.className = "food-card interactive-food-card";
+
+    const openButton = document.createElement("button");
+    openButton.type = "button";
+    openButton.className = "food-card-open";
+    openButton.setAttribute("aria-label", "View details for " + item.name);
+    openButton.addEventListener("click", () => openItemModal(item));
 
     const img = document.createElement("img");
     img.src = item.image;
@@ -110,15 +213,23 @@ function renderMenu(category = "coffee") {
 
     const body = document.createElement("div");
     body.className = "card-body";
-
     const title = document.createElement("h3");
     title.textContent = item.name;
-
     const description = document.createElement("p");
     description.textContent = item.description;
-
     body.append(title, description);
-    card.append(img, body);
+    openButton.append(img, body);
+
+    const heart = document.createElement("button");
+    heart.type = "button";
+    heart.className = "food-card-heart";
+    const liked = favourites.includes(item.name);
+    heart.textContent = liked ? "♥" : "♡";
+    heart.classList.toggle("is-favourite", liked);
+    heart.setAttribute("aria-label", (liked ? "Remove " : "Save ") + item.name + (liked ? " from favourites" : " to favourites"));
+    heart.setAttribute("aria-pressed", String(liked));
+    heart.addEventListener("click", () => toggleFavourite(item.name));
+    card.append(openButton, heart);
     menuGrid.appendChild(card);
   });
 }
@@ -133,6 +244,8 @@ document.querySelectorAll(".filter").forEach(button => {
     });
 
     button.classList.add("active");
+    showingFavourites = false;
+    saveFavourites();
     renderMenu(button.dataset.category);
   });
 });
