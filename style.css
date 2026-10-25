@@ -550,9 +550,7 @@ img {
 }
 
 .offer-banner {
-  background:
-    linear-gradient(135deg, rgba(0,100,0,0.95), rgba(0,50,0,0.9)),
-    url("images/offer.jpg") center/cover;
+  background: #194D38;
   min-height: 340px;
   border-radius: 22px;
   padding: 50px;
