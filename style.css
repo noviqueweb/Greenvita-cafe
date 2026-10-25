@@ -57,7 +57,11 @@ img {
   width: min(1180px, 90%);
   margin: auto;
 }
-
+@media (max-width: 600px) {
+  .menu-section .container {
+    width: 96%;
+  }
+}
 .section {
   padding: 110px 0;
 }
