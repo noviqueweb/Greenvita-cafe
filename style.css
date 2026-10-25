@@ -1212,7 +1212,7 @@ img {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    scroll-padding-inline: 12px;
+    scroll-padding-inline: 0px;
    padding: 2px 16px;
     overflow-y: hidden;
     gap: 8px;
