@@ -1294,3 +1294,27 @@ img {
     padding-top: 10px;
   }
 }
+/* Premium Mobile Highlights */
+@media (max-width: 768px) {
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 4%;
+    gap: 12px;
+    background: #f8f5e9;
+  }
+
+  .highlight-item {
+    padding: 20px 8px;
+    background: #ffffff;
+    border: 1px solid #e8e8df;
+    border-radius: 14px;
+  }
+
+  .highlight-item h3 {
+    margin: 8px 0 5px;
+  }
+
+  .about-section {
+    padding-top: 15px;
+  }
+}
