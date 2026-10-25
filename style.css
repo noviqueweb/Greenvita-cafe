@@ -1274,17 +1274,23 @@ img {
   }
 }
 /* Mobile Highlights Spacing Fix */
+/* Mobile Highlights Spacing Fix */
 @media (max-width: 768px) {
   .highlights {
-    padding: 30px 5%;
-    gap: 20px 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px 4%;
+    gap: 5px;
   }
 
   .highlight-item {
-    padding: 10px 5px;
+    padding: 5px;
+  }
+
+  .highlight-item h3 {
+    margin: 5px 0;
   }
 
   .about-section {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 }
