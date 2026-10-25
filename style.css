@@ -1261,3 +1261,8 @@ img {
     padding-right: 0;
   }
 }
+@media (max-width: 768px) {
+  #gallery {
+    scroll-margin-top: 110px;
+  }
+}
