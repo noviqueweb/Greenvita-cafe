@@ -8,8 +8,8 @@ const cafe = {
   address: "Shop No. 4A, GreenVita Cafe, Shantivan, Malad, Shantivan Society, Raheja Township, Malad East, Mumbai, Maharashtra",
   openingHours: "Monday – Sunday: 10:00 AM – 12:00 Midnight",
   instagramUrl: "https://www.instagram.com/greenvita_cafe/",
-  mapsUrl: "https://maps.app.goo.gl/cRfxgsUjcsuaPCZv5",
- googleReviewUrl: "https://g.page/r/CZbIwJqlB2gIEBM/review",
+ mapsUrl: "https://maps.app.goo.gl/UrshpN6HAew9cTVz7?g_st=ic",
+googleReviewUrl: "https://g.page/r/CcVGkD--Bv6zEBM/review",
 };
 
 // Website loading screen
